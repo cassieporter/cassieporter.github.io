@@ -3,38 +3,134 @@
 
 <head>
     <meta charset="utf-8">
-    <title>MAP672 Portfolio Example</title>
+    <title>MAP672 Portfolio</title>
 
     <meta name=‘viewport’ content=‘initial-scale=1,maximum-scale=1,user-scalable=no’ />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Imprima|Dosis|Montez' rel='stylesheet' type='text/css'>
     <style>
-        /* CSS style rules go here! */
+        body {
+            background: #f5f5f5;
+            font-family: Imprima, sans-serif;
+        }
+        
+        header {
+            width: 100%;
+            min-width: 800px;
+            margin: 0 auto;
+            background: #bd3222;
+            padding: 15px 0 20px;
+        }
+        
+        h1 {
+            font-family: 'Montez', sans-serif;
+            color: #375671;
+            width: 80%;
+            margin: 0 auto;
+            color: whitesmoke;
+        }
+        
+        h2 {
+            font-family: 'Dosis', sans-serif;
+            color: #375671;
+            width: 80%;
+            margin: 0 auto;
+            color: whitesmoke;
+        }
+        
+        h3 {
+            font-family: Dosis, sans-serif;
+            color: #003d71
+        }
+        
+        p {
+            font-size: .9em;
+            color: #0a149f;
+        }
+        
+        ul {
+            list-style-type: none;
+            font-size: .9em;
+            color: #003d71;
+            line-height: 1.6em;
+        }
+        
+        a,
+        a:visited {
+            color: #003d71;
+        }
+        
+        .project {
+            width: 80%;
+            min-width: 800px;
+            height: 100%;
+            margin: 35px auto;
+        }
+        
+        .project:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .project-image {
+            width: 388px;
+            height: 240px;
+            background: white;
+            float: left;
+            margin-right: 20px;
+            border: 2px solid #dddddd;
+        }
 
     </style>
 </head>
 
 <body>
     <header>
-        <h1>MAP672: Programming for Web Mapping</h1>
-        <h2>Web Cartography at the University of Kentucky</h2>
-        <section>
-            <img src="" alt="">
-            <h3></h3>
-            <p></p>
-            <p></p>
-            <ul>
-                <li><a href="" /></li>
-                <li><a href="" /></li>
-            </ul>
-        </section>
-        <img src="images/FleaMarkets.png" alt="Biscuits 'n' Gravy Index" />
-        <h3>Flea Markets</h3>
-        <p>This dot map shows the rate of flea markets per county population.</p>
-        <p>The map was generated in QGIS by doing bla bla bla ...</p>
+        <h1>Cassie Porter</h1>
+        <h2><i>Web Cartography Portfolio at the University of Kentucky</i></h2>
+    </header>
+    <section class="project">
+        <a target="_blank" href="maps/FleaMarkets.png"><img src="images/FleaMarkets.png" alt="Biscuits 'n' Gravy Index" class="project-image" /></a>
+        <h3><a target="_blank" href= "maps/FleaMarkets.png">Flea Markets</a></h3>
+        <p>This map shows the number of flea markets per county population for Alabama, Georgia and South Carolina.</p>
+        <p>This map was generated in QGIS by geocoding flea market locations sourced from POI Factory and creating a choropleth map of the number of flea markets per 10,000 people for counties within the states of Alabama, Georgia and South Carolina. </p>
         <ul>
-            <li>See the map: <a href="#">Flea Markets</a></li>
-            <li>Data Source: <a href="https://asterweb.jpl.nasa.gov/gdem.asp">POI Factory (flea market locations) and 2010 U.S Census Bureau (population).
-        </section>
+            <li>See the map: <a target='_blank' href="maps/FleaMarkets.png">Flea Markets</a></li>
+            <li>Data Sources: <a target='_blank' href="http://www.poi-factory.com/">POI Factory (flea market locations)</a> and <a href="http://www.census.gov/2010census/">2010 U.S Census Bureau (population)</a>
+    </section>
+    <section class="project">
+        <a target="_blank" href="maps/Breweries.png"><img src="images/Beer.png" alt="Breweries in North America and Hawaii" class="project-image" /></a>
+        <h3><a target="_blank" href="maps/Breweries.png">Breweries</a></h3>
+        <p>This hexbin map shows the number of breweries in North America and Hawaii .</p>
+        <p>This map was generated in QGIS by creating 50km hexbins based on brewery locations across North America and Hawaii. </p>
+        <ul>
+            <li>See the map: <a target='_blank' href="maps/Breweries.png">Breweries</a></li>
+            <li>Data Source: <a target='_blank' href="http://www.poi-factory.com/">POI Factory</a>
+    </section>
+
+    <section class="project">
+        <a target="_blank" href="https://cass222.cartodb.com/viz/8e76fd62-9eb5-11e5-99d2-0e31c9be1b51/public_map"><img src="images/Imprisonment.png" alt="Imprisonment" class="project-image" /></a>
+        <h3><a target="_blank" href= "https://cass222.cartodb.com/viz/8e76fd62-9eb5-11e5-99d2-0e31c9be1b51/public_map">Imprisonment Rates</a></h3>
+        <p>This map shows imprisonment rates for indigenous (Aboriginal and Torres Strait Islanders) vs.non-indigenous persons in Australian states in 2011.</p>
+        <p>This map was generated in QGIS by collating and analysing statistics for imprisonment of indigenous and non-indigenous persons within each State. </p>
+        <ul>
+            <li>See the map: <a target="_blank" href="https://cass222.cartodb.com/viz/8e76fd62-9eb5-11e5-99d2-0e31c9be1b51/public_map">Imprisonment of Indigenous vs. Non-indigenous Persons in Australian States</a></li>
+            <li>Data Source: <a target="_blank" href="http://www.abs.gov.au"> Australian Bureau of Statistics</a>
+            </li>
+    </section>
+    <section class="project">
+        <a target='_blank' href="http://cassieporter.github.io/Prop-Symbol-Map-PPlants/"><img src="images/PowerPlants.png" alt="Power Plants in the U.S.A" class="project-image" /></a>
+        <h3><a target = '_blank' href="http://cassieporter.github.io/Prop-Symbol-Map-PPlants">Power Plant Proportional Symbol Map</a></h3>
+        <p>This map shows the relative proportion of nuclear, hydro and solar powered plants in the U.S.A </p>
+        <p>This map was built with custom JavaScript code, drawing upon the Leaflet JavaScript Library and referencing a geoJson file to produce a proportional symbol map with layers that are able to be toggled on or off. The map has on click features coded in to limit the data displayed to 500km from the clicked location. Popup information is also displayed for each plant when clicked </p>
+        <ul>
+            <li>See the map: <a target='_blank' href="http://cassieporter.github.io/Prop-Symbol-Map-PPlants/">Power Plant Proportional Symbol Map</a></li>
+            <li>Data Source: <a target='_blank' href="http://www.eia.gov/electricity/data/eia923/">U.S Energy Information Administration</a></li>
+        </ul>
+    </section>
+
 
 </body>
 
